@@ -1,8 +1,6 @@
 def generate_key():
     with open('my_key.txt') as f:
-        for line in f:
-            api_key = line
-    return mod(api_key)
+        return mod(f.read())
 
 def mod(api_key):
     arr = ['0','2','2', '9', '3']
