@@ -1,13 +1,74 @@
 <!doctype html>
+<html>
 <head>
   <title>Find your perfect vacation destination</title>
+  <link href='css/bootstrap.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <header>
-    <div width="100%" id="header" name="header" style="background:blue"> HEADER </div>
-  </header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Chose your next holiday!</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">About us</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Countries <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="thailand.html">Thailand</a></li>
+              <li><a href="china.html">China</a></li>
+              <li><a href="greece.html">Greece</a></li>
+              <li><a href="norway.html">Norway</a></li>
+              <li><a href="spain.html">Spain</a></li>
+              <li><a href="switzerland.html">Switzerland</a></li>
+              <li><a href="barbados.html">Barbados</a></li>
+            </ul>
+          </li>
+        </ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+
+<header>
+  <div width="100%" id="header" name="header" style="background:blue"> HEADER </div>
+</header>
+
+<div class="container">
+  <h1><center><h1> Your perfect travel destination is... <b>Thailand!</b></h1></center></h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <img src='images/thailand1.jpg'  style="width:100%" height="300">
+    </div>
+
+      <div class="col-sm-4">
+        <img src='images/thailand2.jpg'  style="width:100%" height="300">
+      </div>
+
+  <div class="col-sm-4">
+    <img src='images/thailand3.jpg'  style="width:100%" height="300">
+  </div>
+</div>
+</div>
+<br></br>
+
   <div name="info" id="info">
-    <h1> Your perfect travel destination is... <b>Thailand!</b></h1>
+    <div class="container">
+      <div class="row"; style="border:1px; border-style:solid; border-color:#3CB371">
+        <div class="col-sm-12">
     <p><it>Friendly and fun-loving, cultured and historic, Thailand radiates a golden hue, from its glittering temples and tropical beaches through to the ever-comforting Thai smile.</it><br>
     <b>A Bountiful Table</b><br>
     Adored around the world, Thai cuisine expresses fundamental aspects of Thai culture: it is generous, warm, refreshing and relaxed. Thai dishes rely on fresh, local ingredients – pungent lemongrass, searing chillies and plump seafood. A varied national menu is built around the four fundamental flavours: spicy, sweet, salty and sour. Roving appetites go on eating tours of Bangkok noodle shacks, seafood pavilions in Phuket, and Burmese market stalls in Mae Sot. Cooking classes reveal the simplicity behind the seemingly complicated dishes, and mastering the market is an important survival skill.<br>
@@ -18,6 +79,10 @@
     <b>Sand between Your Toes</b><br>
     With a long coastline (actually, two coastlines) and jungle-topped islands anchored in azure waters, Thailand is a tropical getaway for the hedonist and the hermit, the prince and the pauper. This paradise offers a varied menu: playing in the gentle surf of Ko Lipe, diving with whale sharks off Ko Tao, scaling the sea cliffs of Krabi, kiteboarding in Hua Hin, partying on Ko Phi-Phi, recuperating at a health resort on Ko Samui and feasting on the beach wherever sand meets sea.<br>
   </div>
+</div>
+</div>
+</div>
+
   <div id="weather" name="weather" action="/weather">
     <h1>The weather in Thailand at the moment: </h1>
   </div>
@@ -27,4 +92,13 @@
   <footer>
       <div id="footer" name="footer"  width="100%"  style="background:blue"> FOOTER   <p>Disclaimer: This website is a study project for CF:G London and all the texts on the website come from lonelyplanet.com.</p> </div>
     </footer>
-  </body>
+
+    <div id='social-buttons'><center>
+      <a href="https://twitter.com" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a>
+      <a href="http://www.facebook.com" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>
+      <a href="https://www.pinterest.co.uk/" target="_blank"> <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" /></a>
+    </center>
+    </div>
+
+</body>
+</html>
