@@ -3,6 +3,7 @@ import requests
 
 from quiz import choose_country
 from mgfilename import send_simple_message
+from weather import get_weather
 
 app = Flask("travelling")
 
@@ -19,7 +20,7 @@ def travel_quiz():
 
 @app.route("/country/<country>")
 def display_country(country):
-    return render_template(f"{country}.html")
+    return render_template(f"{country}.html", weather=get_weather(country))
 
 
 @app.route("/email", methods=["POST"])
