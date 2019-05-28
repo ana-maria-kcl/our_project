@@ -83,11 +83,11 @@
 </div>
 </div>
 
-  <div id="weather" name="weather" action="/weather">
+  <div id="weather" name="weather">
     <h1>The weather in China at the moment: </h1>
-  </div>
-  <div id="SM" name="SM" action="/SM">
-    <h1>The latest pics from China on Instagram: </h1>
+    {{ weather["temperature"] }} °C
+    {{ weather["description"] }}
+    <img src="http://openweathermap.org/img/w/{{ weather["icon"] }}.png" alt="Image">
   </div>
   <footer>
       <div id="footer" name="footer"  width="100%"  style="background:blue"> FOOTER
