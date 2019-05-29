@@ -6,46 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
+
+  <!-- navigation bar-->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
+      <div class="navbar-header"> 
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">Chose your next holiday!</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">About us</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Countries <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/country/thailand">Thailand</a></li>
-              <li><a href="/country/china">China</a></li>
-              <li><a href="/country/greece">Greece</a></li>
-              <li><a href="/country/norway">Norway</a></li>
-              <li><a href="/country/spain">Spain</a></li>
-              <li><a href="/country/switzerland">Switzerland</a></li>
-              <li><a href="/country/barbados">Barbados</a></li>
-            </ul>
-          </li>
-        </ul>
-</div><!-- /.navbar-collapse -->
-</div><!-- /.container-fluid -->
-</nav>
-  <header>
-    <div width="100%" id="header" name="header" style="background:blue"> HEADER </div>
-  </header>
-  <div class="container">
+          </button> 
+          <a class="navbar-brand" href="/">Chose your next holiday!</a>
+        </div>      
+      </div><!-- /.navbar-collapse -->
+    </nav>
+    <!-- navigation bar ends-->
+    
     <h1><center><h1> Your perfect travel destination is... <b>Barbados!</b></h1></center></h1>
-  </div>
 
+  <!--images -->
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
@@ -62,16 +41,19 @@
   </div>
   </div>
   <br></br>
+  <!--images end and line break -->
+
+  <!-- country information -->
   <div name="info" id="info">
     <div class="container">
       <div class="row"; style="border:1px; border-style:solid; border-color:#3CB371">
         <div class="col-sm-12">
     <p><it>While it's justifiably famed for its fantastic beaches, Barbados is an island that has it all. In addition to fine powdery sand and brilliant turquoise bays, you'll find smashing nightlife, a Unesco World Heritage–listed capital, a beautiful interior dotted with gardens, and wild surf on the lonely east coast, all inhabited by a proud and welcoming populace.</it><br>
     <b>What to see</b><br>
-    St Nicholas Abbey is one of the oldest plantation houses in the Caribbean. The grounds are simply gorgeous and the rum and sugar museum houses historical artefacts, including slave records and ledgers.
+    <p><it>St Nicholas Abbey is one of the oldest plantation houses in the Caribbean. The grounds are simply gorgeous and the rum and sugar museum houses historical artefacts, including slave records and ledgers.
     The George Washington House was the home of the US president and his brother Lawrence during their stay in 1751. It now houses a museum bringing 18th-century Barbados to life.
     The heart of Oistins is its large, bustling seaside fish market. On Friday and Saturday it hosts the island's best party, with soca, reggae, pop and country music, vendors selling barbecued fish and plenty of rum drinking. It's roughly 80 per cent locals, 20 per cent tourists, and rocks till 2am.
-    Few people follow the coast south of Bathsheba. They should. Look for signs for Martin's Bay, where you'll find a sliver of beach and a little rum shop. After about two more miles, a steep road leads down to Bath Beach, empty on weekdays and crowded with families on weekends.
+    Few people follow the coast south of Bathsheba. They should. Look for signs for Martin's Bay, where you'll find a sliver of beach and a little rum shop. After about two more miles, a steep road leads down to Bath Beach, empty on weekdays and crowded with families on weekends.</it><br>
     <b>Where to eat and drink</b><br>
     On the Speightstown waterfront, the Fisherman's Pub is a local institution that serves up fish from the boats floating off the back deck, with steel-pan music on Wednesdays. Try the national dish of cou-cou (cornmeal and okra) and flying fish.
     David's Place is a very romantic spot overlooking St Lawrence Bay. Waiters glide about with seafood platters and Creole curries.
@@ -82,26 +64,39 @@
 </div>
 </div>
 </div>
-    <div id="weather" name="weather">
-    <h1>The weather in Barbados at the moment: </h1>
-      {{ weather["temperature"] }} °C
-      {{ weather["description"] }}
-    <img src="http://openweathermap.org/img/w/{{ weather["icon"] }}.png" alt="Image">
-  </div>
-  <footer>
-      <div id="footer" name="footer"  width="100%"  style="background:blue"> FOOTER   <p>Disclaimer: This website is a study project for CF:G London and all the texts on the website come from lonelyplanet.com.</p> </div>
-    </footer>
-    <p>Enter your email to stay up-to-date with our news and special offers below.</p>
-    <form method="post" action="/email">
+  <!--country information ends-->
+
+    <!--country weather-->
+
+  <div class="weather-countries" id="weather" name="weather">
+      <h1>The weather in Barbados at the moment: </h1>
+      <p>{{ weather["temperature"] }} °C  {{ weather["description"] }}</p>
+      <table cellpadding="0" cellspacing="0" border="0" width="100%">
+      <tr><td align="center">
+      <img src="http://openweathermap.org/img/w/{{ weather["icon"] }}.png" alt="Image">
+    </td></tr>
+    </table>
+    </div>
+  
+    <!--country weather ends -->
+
+    <!--footer starts -->
+    
+  <footer class="panel-footer">
+    <div id="footer" name="footer">   
+      <p>Disclaimer: This website is a study project for CF:G London and all the texts on the website come from lonelyplanet.com.
+      <p>Enter your email to stay up-to-date with our news and special offers below.</p>
+      <form method="post" action="/email">
       <label> Your email: </label>
       <input type="email" name="email" id="email" required="required">
       <input type="submit" name="submit" value="Submit" id="submit-button">
-    </form>
-    <div id='social-buttons'><center>
+      </form>
+      <div id='social-buttons'><center>
       <a href="https://twitter.com/barbados" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a>
       <a href="https://www.facebook.com/VisitBarbados/" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>
       <a href="https://www.pinterest.co.uk/" target="_blank"> <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" /></a>
     </center>
     </div>
+  </footer>
   </body>
   </html>

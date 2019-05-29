@@ -5,42 +5,43 @@
   <link href='/static/css/bootstrap.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="background-image:url('/static/images/holiday.jpg');
+<body style="background-image:url('/static/images/holiday2.jpeg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover" >
 
-<div class="text-center", style="font-size:20px">
+<div class="text-center", style="font-size:18px">
   <div name="quiz" id="quiz">
     <h1>Chose your next holiday!</h1>
-    <p>Hi! We know that it can be challenging sometimes to decide where to head for the next holiday. Our quiz will help you to solve this problem. Answer few simple questions - and we will tell you, what's the best destination for you!</p>
+    <p>Hi! We know that it can be challenging sometimes to decide where to head for the next holiday.<p> 
+    <p>Our quiz will help you to solve this problem. Answer few simple questions - and we will tell you, what's the best destination for you!</p>
     <form method="post" action="/quiz">
       <label>Question 1</label>
         <p>What do you like to do on vacation?</p>
-        <input type="radio" name="q1" id="q1" value="beach" required="required">Stay on the beach all day long</input><br>
-        <input type="radio" name="q1" id="q1" value="hiking" required="required">Go hiking in the mountains</input><br>
-        <input type="radio" name="q1" id="q1" value="club" required="required">Dance in the club all night long</input><br>
+        <input type="radio" name="q1" id="q1" value="beach" required="required"> Stay on the beach all day long</input><br>
+        <input type="radio" name="q1" id="q1" value="hiking" required="required"> Go hiking in the mountains</input><br>
+        <input type="radio" name="q1" id="q1" value="club" required="required"> Dance in the club all night long</input><br>
       <label>Question 2</label>
         <p>What climate do you like?</p>
-        <input type="radio" name="q2" id="q2" value="sunny" required="required">I like when it's hot and sunny</input><br>
-        <input type="radio" name="q2" id="q2" value="chilly" required="required">I prefer chilly summers</input><br>
-        <input type="radio" name="q2" id="q2" value="rainy" required="required">I don't care about the temprature but hate winds and rains</input><br>
+        <input type="radio" name="q2" id="q2" value="sunny" required="required"> I like when it's hot and sunny</input><br>
+        <input type="radio" name="q2" id="q2" value="chilly" required="required"> I prefer chilly summers</input><br>
+        <input type="radio" name="q2" id="q2" value="rainy" required="required"> I don't care about the temprature but hate winds and rains</input><br>
       <label>Question 3</label>
         <p>What kind of food do you prefer?</p>
-        <input type="radio" name="q3" id="q3" value="exotic" required="required">Exotic</input><br>
-        <input type="radio" name="q3" id="q3" value="european" required="required">Traditional European</input><br>
+        <input type="radio" name="q3" id="q3" value="exotic" required="required"> Exotic</input><br>
+        <input type="radio" name="q3" id="q3" value="european" required="required"> Traditional European</input><br>
         <input type="radio" name="q3" id="q3" value="any" required="required">Open for any options</input><br>
       <label>Question 4</label>
         <p>Who is you travel buddy?</p>
-        <input type="radio" name="q4" id="q4" value="friend" required="required">My best friend</input><br>
-        <input type="radio" name="q4" id="q4" value="partner" required="required">My partner</input><br>
-        <input type="radio" name="q4" id="q4" value="family" required="required">My family</input><br>
+        <input type="radio" name="q4" id="q4" value="friend" required="required"> My best friend</input><br>
+        <input type="radio" name="q4" id="q4" value="partner" required="required"> My partner</input><br>
+        <input type="radio" name="q4" id="q4" value="family" required="required"> My family</input><br>
       <label>Question 5</label>
         <p>How long is your next vacation?</p>
-        <input type="radio" name="q5" id="q5" value="weekend" required="required">Just a weekend break</input><br>
-        <input type="radio" name="q5" id="q5" value="week" required="required">Full week</input><br>
-        <input type="radio" name="q5" id="q5" value="month" required="required">Off for a month</input><br>
+        <input type="radio" name="q5" id="q5" value="weekend" required="required"> Just a weekend break</input><br>
+        <input type="radio" name="q5" id="q5" value="week" required="required"> Full week</input><br>
+        <input type="radio" name="q5" id="q5" value="month" required="required"> Off for a month</input><br>
       <input type="submit" name="submit" value="Submit" id="submit-button">
     </form>
 </div>
@@ -48,7 +49,7 @@
 <br></br>
 <div class="panel-footer">
   <footer>
-    <div id="footer" name="footer"  width="100%"  style="font-size:25px">
+    <div id="footer" name="footer"  width="100%"  style="font-size:18px">
     <p>Enter your email to stay up-to-date with our news and special offers below.</p>
     <form method="post" action="/email">
       <label> Your email: </label>

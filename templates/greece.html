@@ -6,46 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <nav class="navbar navbar-default">
+<!-- navigation bar-->
+<nav class="navbar navbar-default">
     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
+      <div class="navbar-header"> 
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+        </button> 
         <a class="navbar-brand" href="/">Chose your next holiday!</a>
-      </div>
+      </div>      
+    </div><!-- /.navbar-collapse -->
+  </nav>
+  <!-- navigation bar ends-->
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">About us</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Countries <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/country/thailand">Thailand</a></li>
-              <li><a href="/country/china">China</a></li>
-              <li><a href="/country/greece">Greece</a></li>
-              <li><a href="/country/norway">Norway</a></li>
-              <li><a href="/country/spain">Spain</a></li>
-              <li><a href="/country/switzerland">Switzerland</a></li>
-              <li><a href="/country/barbados">Barbados</a></li>
-            </ul>
-          </li>
-        </ul>
-</div><!-- /.navbar-collapse -->
-</div><!-- /.container-fluid -->
-</nav>
-  <header>
-    <div width="100%" id="header" name="header" style="background:blue"> HEADER </div>
-  </header>
-
-  <div class="container">
     <h1><center><h1> Your perfect travel destination is... <b>Greece!</b></h1></center></h1>
-  </div>
+
+<!-- images -->
 
   <div class="container">
     <div class="row">
@@ -63,9 +40,12 @@
   </div>
   </div>
   <br></br>
+  <!-- images end and line break -->
+  
+  <!--country information-->
   <div name="info" id="info">
     <div class="container">
-      <div class="row"; style="border:1px; border-style:solid; border-color:#3CB371">
+      <div class="row">
         <div class="col-sm-12">
     <p><it>Ancient sun-bleached ruins pierce blue skies as the Aegean laps at the endless coastline. And Greek culture is alive with passionate music, inspired cuisine and thrill-seeking activities.</it><br>
     <b>Cultural Treasure Chest</b><br>
@@ -80,26 +60,38 @@
 </div>
 </div>
 </div>
-  <div id="weather" name="weather">
-    <h1>The weather in Greece at the moment: </h1>
-    {{ weather["temperature"] }} °C
-    {{ weather["description"] }}
-    <img src="http://openweathermap.org/img/w/{{ weather["icon"] }}.png" alt="Image">
-  </div>
+<!--country information ends -->
+
+  <!--country weather-->
+
+  <div class="weather-countries" id="weather" name="weather">
+      <h1>The weather in Greece at the moment: </h1>
+      <p>{{ weather["temperature"] }} °C  {{ weather["description"] }}</p>
+      <table cellpadding="0" cellspacing="0" border="0" width="100%">
+      <tr><td align="center">
+      <img src="http://openweathermap.org/img/w/{{ weather["icon"] }}.png" alt="Image">
+    </td></tr>
+    </table>
+    </div>
+  
+    <!--country weather ends -->
+
   <footer>
-      <div id="footer" name="footer"  width="100%"  style="background:blue"> FOOTER   <p>Disclaimer: This website is a study project for CF:G London and all the texts on the website come from lonelyplanet.com.</p> </div>
-      <p>Enter your email to stay up-to-date with our news and special offers below.</p>
-      <form method="post" action="/email">
-        <label> Your email: </label>
-        <input type="email" name="email" id="email" required="required">
-        <input type="submit" name="submit" value="Submit" id="submit-button">
-      </form>
-    </footer>
-    <div id='social-buttons'><center>
+    <footer class="panel-footer">
+      <div id="footer" name="footer">   
+        <p>Disclaimer: This website is a study project for CF:G London and all the texts on the website come from lonelyplanet.com.
+        <p>Enter your email to stay up-to-date with our news and special offers below.</p>
+        <form method="post" action="/email">
+          <label> Your email: </label>
+          <input type="email" name="email" id="email" required="required">
+          <input type="submit" name="submit" value="Submit" id="submit-button">
+          </form>
+          <div id='social-buttons'><center>
       <a href="https://twitter.com/visitgreecegr" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a>
       <a href="https://www.facebook.com/visitgreecegr/" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>
       <a href="https://www.pinterest.co.uk/" target="_blank"> <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" /></a>
     </center>
     </div>
+  </footer>
   </body>
   </html>

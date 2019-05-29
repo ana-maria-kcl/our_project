@@ -3,50 +3,28 @@
 <head>
   <title>Find your perfect vacation destination</title>
   <link href='/static/css/bootstrap.css' rel='stylesheet'>
+  <link href='/static/css/countries.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
+<!-- navigation bar-->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
+      <div class="navbar-header"> 
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+        </button> 
         <a class="navbar-brand" href="/">Chose your next holiday!</a>
-      </div>
+      </div>      
+    </div><!-- /.navbar-collapse -->
+  </nav>
+  <!-- navigation bar ends-->
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">About us</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Countries <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/country/thailand">Thailand</a></li>
-              <li><a href="/country/china">China</a></li>
-              <li><a href="/country/greece">Greece</a></li>
-              <li><a href="/country/norway">Norway</a></li>
-              <li><a href="/country/spain">Spain</a></li>
-              <li><a href="/country/switzerland">Switzerland</a></li>
-              <li><a href="/country/barbados">Barbados</a></li>
-            </ul>
-          </li>
-        </ul>
-</div><!-- /.navbar-collapse -->
-</div><!-- /.container-fluid -->
-</nav>
-  <header>
-    <div width="100%" id="header" name="header" style="background:blue"> HEADER </div>
-  </header>
-
-  <div class="container">
     <h1><center><h1> Your perfect travel destination is... <b>Spain!</b></h1></center></h1>
-  </div>
 
+  <!-- images -->
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
@@ -63,12 +41,13 @@
   </div>
   </div>
   <br></br>
-
+  <!-- images end and line break -->
+ 
+  <!-- country information -->
   <div name="info" id="info">
     <div class="container">
-      <div class="row"; style="border:1px; border-style:solid; border-color:#3CB371">
+      <div class="row">
         <div class="col-sm-12">
-    <h1> Your perfect travel destination is... <b>Spain!</b></h1>
     <p><it>Passionate, sophisticated and devoted to living the good life, Spain is both a stereotype come to life and a country more diverse than you ever imagined.</it><br>
     <b>An Epic Land</b><br>
     Spain’s diverse landscapes stir the soul. The Pyrenees and the Picos de Europa are as beautiful as any mountain range on the continent, while the snowcapped Sierra Nevada rises up improbably from the sun-baked plains of Andalucía; these are hiking destinations of the highest order. The wildly beautiful cliffs of Spain’s Atlantic northwest are offset by the charming coves of the Mediterranean. And everywhere you go, villages of timeless beauty perch on hilltops, huddle in valleys and cling to coastal outcrops as tiny but resilient outposts of Old Spain. That's where the country's charms are most likely to take hold.<br>
@@ -79,31 +58,44 @@
     <b>Fiestas & Flamenco</b><br>
     For all the talk of Spain's history, this is a country that lives very much in the present and there's a reason 'fiesta' is one of the best-known words in the Spanish language – life itself is a fiesta here and everyone seems to be invited. Perhaps you'll sense it along a crowded, post-midnight street when all the world has come out to play. Or maybe that moment will come when a flamenco performer touches something deep in your soul. Whenever it happens, you'll find yourself nodding in recognition: this is Spain.<br>
   </div>
-</div>
-</div>
-</div>
+    </div>
+      </div>
+          </div>
 
-  <div id="weather" name="weather">
+  <!--country information ends-->
+
+  <!--country weather-->
+
+  <div class="weather-countries" id="weather" name="weather">
     <h1>The weather in Spain at the moment: </h1>
-    {{ weather["temperature"] }} °C
-    {{ weather["description"] }}
+    <p>{{ weather["temperature"] }} °C  {{ weather["description"] }}</p>
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr><td align="center">
     <img src="http://openweathermap.org/img/w/{{ weather["icon"] }}.png" alt="Image">
-  </div>
-  <footer>
-      <div id="footer" name="footer"  width="100%"  style="background:blue"> FOOTER   <p>Disclaimer: This website is a study project for CF:G London and all the texts on the website come from lonelyplanet.com.</p> </div>
-    </footer>
-    <p>Enter your email to stay up-to-date with our news and special offers below.</p>
-    <form method="post" action="/email">
-      <label> Your email: </label>
-      <input type="email" name="email" id="email" required="required">
-      <input type="submit" name="submit" value="Submit" id="submit-button">
-    </form>
-  <div id='social-buttons'><center>
-      <a href="https://twitter.com/spain" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a>
-      <a href="https://www.facebook.com/spain.info.gb/" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>
-      <a href="https://www.pinterest.co.uk/" target="_blank"> <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" /></a>
-    </center>
+  </td></tr>
+  </table>
   </div>
 
+  <!--country weather ends -->
+
+  <!--footer starts-->
+
+  <footer class="panel-footer">
+      <div id="footer" name="footer">   
+        <p>Disclaimer: This website is a study project for CF:G London and all the texts on the website come from lonelyplanet.com.
+        <p>Enter your email to stay up-to-date with our news and special offers below.</p>
+        <form method="post" action="/email">
+          <label> Your email: </label>
+          <input type="email" name="email" id="email" required="required">
+          <input type="submit" name="submit" value="Submit" id="submit-button">
+          </form>
+          <div id='social-buttons'><center>
+            <a href="https://twitter.com/spain" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a>
+            <a href="https://www.facebook.com/spain.info.gb/" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>
+            <a href="https://www.pinterest.co.uk/" target="_blank"> <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" /></a>
+          </center>
+        </div>
+      </div>
+    </footer>
   </body>
   </html>
