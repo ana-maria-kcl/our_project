@@ -29,4 +29,5 @@ def send_email():
     send_simple_message(personal_data["email"])
     return redirect(request.referrer)
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
